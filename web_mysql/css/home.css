@@ -1,0 +1,269 @@
+/* ========================= header =========================== */
+.header {
+  background-image: url(../images/2023-3-banner.jpg);
+  height: 700px;
+  width: 100%;
+  background-color: #000;
+  background-size: cover; /* Ảnh phủ kín header */
+  background-position: center; /* Căngiữa ảnh */
+  background-repeat: no-repeat; /* Không lặp ảnh */
+}
+/* ============================ end header ================================ */
+
+/* =========================== popular-category =========================== */
+.popular-category {
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.popular-category .title {
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+/* GRID LAYOUT */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 22px;
+  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CATEGORY CARD (LINK) */
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+
+  padding: 24px 10px;
+  text-decoration: none;
+  color: #333;
+
+  transition: 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  aspect-ratio: 1 / 1; /* giữ hình vuông */
+}
+
+/* IMAGE */
+.category-item img {
+  width: 55%;
+  max-height: 65%;
+  object-fit: contain;
+  margin-bottom: 14px;
+  transition: transform 0.25s ease;
+}
+
+/* CATEGORY LABEL */
+.category-item .label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+  text-align: center;
+}
+
+/* HOVER EFFECT (giống Acer) */
+.category-item:hover {
+  transform: translateY(-6px);
+  border-color: #0ea5e9;
+  box-shadow: 0 8px 22px rgba(14, 165, 233, 0.25);
+}
+
+.category-item:hover img {
+  transform: scale(1.06);
+}
+
+.category-item:hover .label {
+  color: #0ea5e9;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1200px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ============== thiết kế new_arriver_text ============ */
+/* container: căn giữa theo chiều ngang và dọc (chiều cao có thể chỉnh) */
+.new_arriver {
+  margin-top: 150px;
+}
+
+.new_arriver .new_text p {
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* chỉnh nếu cần */
+
+  pointer-events: none; /* tránh ảnh hưởng khi hover những phần khác */
+  color: #000000;
+  font-size: 60px;
+}
+
+.new_arriver .product-container {
+  max-width: 1200px; /* chỉnh tùy giao diện */
+  margin: 0 auto; /* CĂN GIỮA */
+  padding: 0 20px; /* optional: chống dính mép */
+}
+
+/* ====================== end new_arriver_text ======================= */
+
+/* ===================== PRODUCT DESIGN ===================*/
+/* PRODUCT LIST GRID */
+.product_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 30px;
+}
+
+/* PRODUCT CARD DESIGN */
+.product_card {
+  min-height: 420px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1px;
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.08);
+  transition: 0.25s ease-in-out;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product_card a {
+  text-decoration: none;
+}
+
+/* RGB glow viền card */
+.product_card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+
+  border-radius: 1px;
+  background: rgba(0, 0, 0, 0.12);
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0.18;
+}
+
+/* Hover hiệu ứng nổi 3D + sáng neon */
+.product_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+}
+
+/* Ảnh sản phẩm */
+.product_card img {
+  width: 100%;
+  border-radius: 1px;
+  margin-bottom: 12px;
+}
+
+/* Tên sản phẩm */
+.product_name {
+  font-size: 100%;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Giá */
+.price {
+  color: #00eaff;
+  font-size: 100%;
+  font-weight: bold;
+}
+/* ========================= end design product car =================== */
+
+/* =========================== new contents =========================== */
+
+/* ====================== new contents text =================== */
+.new_contents {
+  margin-top: 150px;
+}
+
+.new_contents .new_content_text p {
+  position: relative; /* bắt buộc để before bám vào */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* chỉnh nếu cần */
+  margin: 24px 0;
+  pointer-events: none; /* tránh ảnh hưởng khi hover những phần khác */
+  color: #000000;
+  font-size: 60px;
+}
+
+/* ====================== contents =========================== */
+.contents-container {
+  display: flex;
+  justify-content: center; /* căn giữa cả container */
+}
+
+.contents_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* tự xuống hàng khi cần */
+  justify-content: center; /* các thẻ con cũng căn trái */
+}
+
+.contents_card {
+  transition: 0.25s ease-in-out;
+  margin: 40px; /* margin trên dưới trái phải */
+}
+
+.contents_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+}
+
+.contents_card img {
+  width: 600px;
+  height: 170px;
+  object-fit: cover; /* cắt vừa khung, không méo */
+  display: block;
+  border-radius: 1px; /* tuỳ chọn bo góc cho đẹp */
+}
+
+/* ====================== end contents ======================= */

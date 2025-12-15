@@ -1,0 +1,198 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= chỉnh thiết kế của menu ==================*/
+.menu {
+  position: sticky;
+  top: 0;
+  padding-bottom: 10px;
+  z-index: 999;
+  height: 75px;
+  width: 100%;
+  background: #ffffff; /* nền đen hiện đại */
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.15);
+}
+
+.menu .menu_list li:first-child {
+  margin-left: 100px;
+
+  justify-content: left;
+  margin-right: auto; /* đẩy phần menu còn lại sang phải */
+}
+
+/* Thu nhỏ logo */
+.menu .menu_list li:first-child img {
+  height: 90px; /* chỉnh kích thước logo */
+  width: auto;
+}
+
+.menu .menu_list li:first-child a,
+.menu .menu_list li:first-child a::after {
+  all: unset;
+  cursor: default;
+}
+
+.menu .menu_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: right; /* căn giữa menu */
+  gap: 40px; /* khoảng cách giữa các mục */
+  margin-right: 100px;
+}
+
+.menu .menu_list li {
+  position: relative;
+}
+
+.menu .menu_list li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 0;
+  display: inline-block;
+}
+
+/* Hiệu ứng gạch chân neon chạy từ giữa */
+.menu .menu_list li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: #00eaff; /* xanh neon kiểu gaming */
+  transition: 0.3s ease;
+}
+
+.menu .menu_list li a:hover {
+  color: #00eaff;
+}
+
+.menu .menu_list li a:hover::after {
+  width: 100%;
+}
+
+/* ================= kết thúc chỉnh thiết kế của menu ==================*/
+
+/* ========================= wrapper =========================== */
+.wrapper {
+  height: auto;
+  width: 90%;
+  margin: auto;
+}
+/* ========================= end wrapper ======================= */
+
+/* ============================footer====================== */
+.site-footer {
+  margin-top: 40px;
+  background: #30303008;
+  color: #ccc;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding-bottom: 200px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-col h4 {
+  color: #000000;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #454545;
+}
+
+.social a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-legal a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+  color: #aaa;
+}
+
+.connect_icon {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* khoảng cách giữa các icon */
+  align-items: center;
+}
+
+.connect_icon a img {
+  width: 28px; /* kích thước icon */
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0.9); /* nhẹ cho đẹp */
+  transition: 0.25s ease;
+}
+
+/* Hiệu ứng hover */
+.connect_icon a img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+.footer-copyright {
+  color: #777;
+  margin-top: 8px;
+}
